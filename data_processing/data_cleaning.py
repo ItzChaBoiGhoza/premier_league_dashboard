@@ -96,3 +96,9 @@ def player_data(file_path):
     df['Red_per_90'] = ((df['Red_Cards'] / df['Mins'].replace(0, np.nan)) * 90).round(2)
 
     return df
+
+# function for vertical expansion
+def exploding_column(df, column):
+    explode_df = df.explode(column).reset_index(drop=True)
+
+    return explode_df
