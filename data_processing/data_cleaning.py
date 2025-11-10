@@ -134,13 +134,36 @@ def team_data(file_path):
     df = pd.read_csv(file_path)
     
     # eliminate the betting columns
-    new_df = df[['Date', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR', 'HTHG', 'HTAG', 'HTR', 'Referee', 'HS', 'AS', 'HST', 'AST', 'HF', 'AF', 'HC', 'AC', 'HY', 'AY', 'HR', 'AR']].copy()
+    new_df = df[['Date', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR', 'Referee', 'HS', 'AS', 'HST', 'AST', 'HF', 'AF', 'HC', 'AC', 'HY', 'AY', 'HR', 'AR']].copy()
     pd.set_option('display.max_columns', None)
     
     # standardizing date by converting the data type
     new_df['Date'] = pd.to_datetime(new_df['Date'], format='%d/%m/%Y')
     new_df['Date'] = new_df['Date'].dt.strftime('%m/%d/%Y')
     
+    # standardizing column names
+    column_name = [
+        'Date',
+        'Home_Team',
+        'Away_Team',
+        'Home_Goals',
+        'Away_Goals',
+        'Match_Results',
+        'Referee',
+        'Home_Shots',
+        'Away_Shots',
+        'Home_Shots_on_Target',
+        'Away_Shots_on_Target',
+        'Home_Fouls_Committed',
+        'Away_Fouls_Committed',
+        'Home_Corners',
+        'Away_Corners',
+        'Home_Yellow_Cards',
+        'Away_Yellow_Cards',
+        'Home_Red_Cards',
+        'Away_Red_Cards'
+    ]
+    new_df.columns = column_name
     # matchday stadium
     stadium_name = {
         'Liverpool': 'Anfield',
@@ -164,7 +187,7 @@ def team_data(file_path):
         'Southampton': 'St. Mary\'s Stadium',
         'Brighton': 'American Express Stadium' 
     }
-    new_df['Matchday_Stadium'] = new_df['HomeTeam'].map(stadium_name)
+    new_df['Matchday_Stadium'] = new_df['Home_Team'].map(stadium_name)
 
     # standardizing team name
     full_team_name = {
@@ -189,8 +212,8 @@ def team_data(file_path):
         'Southampton': 'Southampton',
         'Brighton': 'Brighton'
     }
-    new_df['HomeTeam'] = new_df['HomeTeam'].map(full_team_name)
-    new_df['AwayTeam'] = new_df['AwayTeam'].map(full_team_name)
+    new_df['Home_Team'] = new_df['Home_Team'].map(full_team_name)
+    new_df['Away_Team'] = new_df['Away_Team'].map(full_team_name)
     
     # creating a team abbreviation
     team_abbreviation = {
@@ -215,8 +238,8 @@ def team_data(file_path):
         'Sheffield United': 'SHU',
         'Southampton': 'SOU'
     }
-    new_df['Home_Abbreviation'] = new_df['HomeTeam'].map(team_abbreviation)
-    new_df['Away_Abbreviation'] = new_df['AwayTeam'].map(team_abbreviation)
+    new_df['Home_Abbreviation'] = new_df['Home_Team'].map(team_abbreviation)
+    new_df['Away_Abbreviation'] = new_df['Away_Team'].map(team_abbreviation)
     
     # incorrect input referee
     # 'A Moss' has never officiated a game, rather it was 'J Moss'
@@ -251,4 +274,4 @@ def team_data(file_path):
     return new_df
 
 print("This is from the team dataset: ", team_data('./data/EPL_20_21.csv'))
-print("This is from the player dataset: ", player_data('./data/EPL_20_21_PLAYERS.csv'))
+#print("This is from the player dataset: ", player_data('./data/EPL_20_21_PLAYERS.csv'))
