@@ -1,5 +1,8 @@
 # premier_league_dashboard
-Interactive web-application to visualize and analyze Premier League `team` and `player` statistics. The dashboard is designed to provide insights into the Premier League seasons. This results enable users to explore player contributions, team trends, and match outcomes through dynamic graphs, and other visualizations. 
+Interactive web-application to visualize and analyze Premier League `team` and `player` statistics. The dashboard is designed to provide insights into the Premier League seasons. This results enable users to explore player contributions, team trends, and match outcomes through dynamic graphs, and other visualizations.
+
+# Objectives
+Provides football enthusiasts with an interactive platform to explore team and player performance. 
 
 # Tasks
 ### Version 1 of data
@@ -17,7 +20,7 @@ Interactive web-application to visualize and analyze Premier League `team` and `
             -  [x] Passes
             -  [x] Yellow cards
             -  [x] Red cards
-        - [ ] __Player's injury count__ (missing matches, probability of the player fit for matches)
+        - [ ] **Player's injury count** (missing matches, probability of the player fit for matches)
     - [x] Task 3: Create a function that could expand vertically
     - [ ] Task 4: Create a function that could expand horizontally
     - [ ] Task 5: Process the team data
@@ -38,6 +41,7 @@ Interactive web-application to visualize and analyze Premier League `team` and `
             - [ ] Goals difference (goals for - goals against)
             - [ ] Shot conversion percentage (goals / total shots)
     - [ ] Task 6: Create new table based on Team's stats
+        **Column Names:**
         - [ ] Club Name
         - [ ] Team Abbreviation
         - [ ] Stadium
@@ -59,6 +63,7 @@ Interactive web-application to visualize and analyze Premier League `team` and `
         - [ ] Total Corner Given
         - [ ] Clean Sheets
     - [ ] Task 7: Create new table for Referee stats
+        **Column Names:**
         - [ ] Name
         - [ ] Total Matches Officiated
         - [ ] Total Minutes Officiated
@@ -70,3 +75,12 @@ Interactive web-application to visualize and analyze Premier League `team` and `
         - [ ] Yellow Given per Match
         - [ ] Total Reds Given
         - [ ] Red Given per Match
+
+# Optional Enhancements
+- Live web-scrapping for current season.
+- Combine all data into a single place, possibly database
+- Deploy to live server from local development
+
+# Acknowledgement
+Team Stats: (Football-Data)[https://www.football-data.co.uk/englandm.php]
+Player Stats: (Kaggle)[https://www.kaggle.com/datasets/sumaya23abdul/english-premier-league-20202021]
