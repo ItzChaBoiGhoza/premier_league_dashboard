@@ -1,1 +1,72 @@
 # premier_league_dashboard
+Interactive web-application to visualize and analyze Premier League `team` and `player` statistics. The dashboard is designed to provide insights into the Premier League seasons. This results enable users to explore player contributions, team trends, and match outcomes through dynamic graphs, and other visualizations. 
+
+# Tasks
+### Version 1 of data
+    - [ ] Load and Clean data for (2020/2021) Premier League Season.
+        - [*] Task 1: Load team and player data
+        - [*] Task 2: Process the player data
+            - [*] Standardizing nationality column
+            - [*] Calculating passes completed
+            - [*] Goal contribution calculation
+            - [*] xG and xA overperformance calculation
+            - [*] Calcuation for per 90 minutes
+                -  [*] Goals
+                -  [*] Goals contribution
+                -  [*] Assists
+                -  [*] Passes
+                -  [*] Yellow cards
+                -  [*] Red cards
+            - [ ] **Player's injury count** (missing matches, probability of the player fit for matches)
+        - [*] Task 3: Create a function that could expand vertically
+        - [ ] Task 4: Create a function that could expand horizontally
+        - [ ] Task 5: Process the team data
+            - [ ] Feature engineer match day grouping (matchday 1, matchday 2,...)
+            - [ ] Captaincy on that match (home and away)
+            - [ ] Manager
+            - [ ] Team formation (see what the team's go to formation throughout the season)
+            - [ ] Home vs away result
+                - [ ] (W, D, L)
+                - [ ] Points achieved (3, 1, 0)
+                - [ ] Total points
+            - [ ] Shots calculations 
+                - [ ] Percentage of total shots and shots on target
+                - [ ] Missed shots (shots - shots on target)
+                - [ ] Home vs Away shots difference
+            - [ ] Goals calculations
+                - [ ] Goals for/against (home vs away)
+                - [ ] Goals difference (goals for - goals against)
+                - [ ] Shot conversion percentage (goals / total shots)
+        - [ ] Task 6: Create new table based on Team's stats
+            - [ ] Club Name
+            - [ ] Team Abbreviation
+            - [ ] Stadium
+            - [ ] Manager
+            - [ ] Captain
+            - [ ] Vice-Captain
+            - [ ] Favourite Formation (if possible)
+            - [ ] Total Shots
+            - [ ] Total Shot Conversion (percentage)
+            - [ ] Total Goals
+            - [ ] Goals per Match
+            - [ ] Total Fouls Committed
+            - [ ] Fouls Committed per Match
+            - [ ] Total Yellow Cards
+            - [ ] Yellow Cards per Match
+            - [ ] Total Red Cards
+            - [ ] Red Cardds per Matchh
+            - [ ] Total Corner Taken
+            - [ ] Total Corner Given
+            - [ ] Clean Sheets
+        - [ ] Task 7: Create new table for Referee stats
+            - [ ] Name
+            - [ ] Total Matches Officiated
+            - [ ] Total Minutes Officiated
+            - [ ] Most Team Officiated (under discussion)
+            - [ ] Least Team Officiated (under discussion)
+            - [ ] Total Fouls Given
+            - [ ] Fouls Given per Match
+            - [ ] Total Yellows Given
+            - [ ] Yellow Given per Match
+            - [ ] Total Reds Given
+            - [ ] Red Given per Match
