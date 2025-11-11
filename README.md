@@ -83,4 +83,5 @@ Provides football enthusiasts with an interactive platform to explore team and p
 
 # Acknowledgement
 Team Stats: (Football-Data)[https://www.football-data.co.uk/englandm.php]
+
 Player Stats: (Kaggle)[https://www.kaggle.com/datasets/sumaya23abdul/english-premier-league-20202021]
