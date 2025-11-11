@@ -1,1 +1,87 @@
 # premier_league_dashboard
+Interactive web-application to visualize and analyze Premier League `team` and `player` statistics. The dashboard is designed to provide insights into the Premier League seasons. This results enable users to explore player contributions, team trends, and match outcomes through dynamic graphs, and other visualizations.
+
+# Objectives
+Provides football enthusiasts with an interactive platform to explore team and player performance. 
+
+# Tasks
+### Version 1 of data
+- [ ] Load and Clean data for (2020/2021) Premier League Season.
+    - [x] Task 1: Load team and player data
+    - [x] Task 2: Process the player data
+        - [x] Standardizing nationality column
+        - [x] Calculating passes completed
+        - [x] Goal contribution calculation
+        - [x] xG and xA overperformance calculation
+        - [x] Calcuation for per 90 minutes
+            -  [x] Goals
+            -  [x] Goals contribution
+            -  [x] Assists
+            -  [x] Passes
+            -  [x] Yellow cards
+            -  [x] Red cards
+        - [ ] **Player's injury count** (missing matches, probability of the player fit for matches)
+    - [x] Task 3: Create a function that could expand vertically
+    - [ ] Task 4: Create a function that could expand horizontally
+    - [ ] Task 5: Process the team data
+        - [ ] Feature engineer match day grouping (matchday 1, matchday 2,...)
+        - [ ] Captaincy on that match (home and away)
+        - [ ] Manager
+        - [ ] Team formation (see what the team's go to formation throughout the season)
+        - [ ] Home vs away result
+            - [ ] (W, D, L)
+            - [ ] Points achieved (3, 1, 0)
+            - [ ] Total points
+        - [ ] Shots calculations 
+            - [ ] Percentage of total shots and shots on target
+            - [ ] Missed shots (shots - shots on target)
+            - [ ] Home vs Away shots difference
+        - [ ] Goals calculations
+            - [ ] Goals for/against (home vs away)
+            - [ ] Goals difference (goals for - goals against)
+            - [ ] Shot conversion percentage (goals / total shots)
+    - [ ] Task 6: Create new table based on Team's stats
+        **Column Names:**
+        - [ ] Club Name
+        - [ ] Team Abbreviation
+        - [ ] Stadium
+        - [ ] Manager
+        - [ ] Captain
+        - [ ] Vice-Captain
+        - [ ] Favourite Formation (if possible)
+        - [ ] Total Shots
+        - [ ] Total Shot Conversion (percentage)
+        - [ ] Total Goals
+        - [ ] Goals per Match
+        - [ ] Total Fouls Committed
+        - [ ] Fouls Committed per Match
+        - [ ] Total Yellow Cards
+        - [ ] Yellow Cards per Match
+        - [ ] Total Red Cards
+        - [ ] Red Cardds per Matchh
+        - [ ] Total Corner Taken
+        - [ ] Total Corner Given
+        - [ ] Clean Sheets
+    - [ ] Task 7: Create new table for Referee stats
+        **Column Names:**
+        - [ ] Name
+        - [ ] Total Matches Officiated
+        - [ ] Total Minutes Officiated
+        - [ ] Most Team Officiated (under discussion)
+        - [ ] Least Team Officiated (under discussion)
+        - [ ] Total Fouls Given
+        - [ ] Fouls Given per Match
+        - [ ] Total Yellows Given
+        - [ ] Yellow Given per Match
+        - [ ] Total Reds Given
+        - [ ] Red Given per Match
+
+# Optional Enhancements
+- Live web-scrapping for current season.
+- Combine all data into a single place, possibly database
+- Deploy to live server from local development
+
+# Acknowledgement
+Team Stats: [Football-Data](https://www.football-data.co.uk/englandm.php)
+
+Player Stats: [Kaggle](https://www.kaggle.com/datasets/sumaya23abdul/english-premier-league-20202021)
